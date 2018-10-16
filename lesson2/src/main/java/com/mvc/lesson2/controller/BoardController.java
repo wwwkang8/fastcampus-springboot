@@ -10,12 +10,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/boards")
 public class BoardController {
 
-    @GetMapping
-    public String list(
-            ServerInfo serverInfo,
-            @RequestParam
-    ){
 
-    }
 
 }
