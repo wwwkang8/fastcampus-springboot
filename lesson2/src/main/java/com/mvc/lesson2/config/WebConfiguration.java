@@ -11,12 +11,12 @@ import java.util.List;
 public class WebConfiguration implements WebMvcConfigurer {
 
     @Override
-    public void addInterceptors(InterceptorRegistry registry){
+    public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new MyInterceptor());
     }
 
     @Override
-    public void addArgumentResolvers(List<HandlerMethodArgumentResolver> resolvers){
+    public void addArgumentResolvers(List<HandlerMethodArgumentResolver> resolvers) {
         resolvers.add(new MyArgumentResolver());
     }
 

@@ -10,7 +10,7 @@ import org.springframework.web.method.support.ModelAndViewContainer;
 public class MyArgumentResolver implements HandlerMethodArgumentResolver {
     @Override
     public boolean supportsParameter(MethodParameter methodParameter) {
-        if(methodParameter.getParameterType() == ServerInfo.class){
+        if (methodParameter.getParameterType() == ServerInfo.class) {
             return true;
         }
         return false;

@@ -11,15 +11,15 @@ public class MyArgumentResolver implements HandlerMethodArgumentResolver {
 
     @Override
     public boolean supportsParameter(MethodParameter methodParameter) {
-       if(methodParameter.getParameterType()==ServerInfo.class){
-           return true;
-       }
-       return false;
+        if (methodParameter.getParameterType() == ServerInfo.class) {
+            return true;
+        }
+        return false;
     }
 
     @Override
     public Object resolveArgument(MethodParameter methodParameter, ModelAndViewContainer modelAndViewContainer, NativeWebRequest nativeWebRequest, WebDataBinderFactory webDataBinderFactory) throws Exception {
-        ServerInfo serverInfo=new ServerInfo();
+        ServerInfo serverInfo = new ServerInfo();
         serverInfo.setIp("127.0.0.1");
         serverInfo.setPort(8080);
         return serverInfo;

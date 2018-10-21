@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8" isELIgnored="false"%>
+         pageEncoding="UTF-8" isELIgnored="false" %>
 <html>
 <head>
     <title>writeform</title>
-</headw
+    </headw
 <body>
 <h1>writeform !!</h1>
 
