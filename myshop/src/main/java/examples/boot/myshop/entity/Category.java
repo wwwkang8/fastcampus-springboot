@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity //엔티티이기 때문에 어노테이션 붙인다
@@ -31,4 +32,16 @@ public class Category {
     테이블을 자동으로 생성하고 지운다는 옵션
     매번 서버 킬 때 지우고 다시 생성
     */
+
+    //helper 메서드
+    /*Board와 Category는 양방향이다.
+    * 그래서 boards.add(board)를 하게되면 맞지않는 카테고리가 저장될 수 있다.
+    * 그렇기 때문에 board.setCategory(this)를 하여 카테고리를 지정해주어야 한다.*/
+    public void addBoard(Board board){
+        if(boards == null){
+            boards=new ArrayList<>();
+        }
+        board.setCategory(this);
+        boards.add(board);
+    }
 }

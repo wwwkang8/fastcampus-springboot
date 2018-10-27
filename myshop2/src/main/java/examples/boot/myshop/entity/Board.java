@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 import static org.eclipse.jdt.internal.compiler.parser.Parser.name;
 
 @Entity
-@Table(name="board")
+@Table(name = "board")
 @Getter
 @Setter
 public class Board {
@@ -25,7 +25,7 @@ public class Board {
     private LocalDateTime createDate;
 
     @ManyToOne
-    @JoinColumn(name="category_id")
+    @JoinColumn(name = "category_id")
     private Category category;
 
 }

@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8" isELIgnored="false"%>
+         pageEncoding="UTF-8" isELIgnored="false" %>
 <html>
 <head>
     <title>List</title>
@@ -14,7 +14,7 @@
 <a href="/boards/4"> 4번 게시물 </a> , 홍길동, 1<br>
 <a href="/boards/5"> 5번 게시물 </a> , 홍길동, 1<br>
 
-이전페이지  &nbsp; &nbsp; &nbsp;  이후페이지 &nbsp;&nbsp; <a href="/boards/write">글쓰기</a>
+이전페이지 &nbsp; &nbsp; &nbsp; 이후페이지 &nbsp;&nbsp; <a href="/boards/write">글쓰기</a>
 </body>
 </html>
 

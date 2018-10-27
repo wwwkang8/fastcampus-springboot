@@ -20,8 +20,8 @@ public class BoardController {
             @RequestParam(name = "page", required = false, defaultValue = "1") int page,
             @RequestParam(name = "searchKind", required = false) String searchKind,
             @RequestParam(name = "searchStr", required = false) String searchStr
-    ){
-        if(serverInfo != null) {
+    ) {
+        if (serverInfo != null) {
             System.out.println(serverInfo.getIp());
             System.out.println(serverInfo.getPort());
         }
@@ -33,17 +33,17 @@ public class BoardController {
 
     @GetMapping(path = "/{boardId}")
     public String read(
-        @PathVariable(name = "boardId") Long boardId,
-        @RequestParam(name = "page", required = false, defaultValue = "1") int page,
-        @RequestParam(name = "searchKind", required = false) String searchKind,
-        @RequestParam(name = "searchStr", required = false) String searchStr
-    ){
+            @PathVariable(name = "boardId") Long boardId,
+            @RequestParam(name = "page", required = false, defaultValue = "1") int page,
+            @RequestParam(name = "searchKind", required = false) String searchKind,
+            @RequestParam(name = "searchStr", required = false) String searchStr
+    ) {
         System.out.println("boardId :" + boardId);
         return "view"; // view name을 리턴한다. view.jsp 를 만들어줘야한다.
     }
 
     @GetMapping(path = "/write")
-    public String writeform(){
+    public String writeform() {
         return "writeform"; // 이름, 제목, 내용을 입력하는 폼을 작성해주세요.
     }
 
@@ -52,7 +52,7 @@ public class BoardController {
             @RequestParam(name = "name", required = true) String name,
             @RequestParam(name = "title", required = true) String title,
             @RequestParam(name = "content", required = true) String content
-    ){
+    ) {
         System.out.println("name : " + name);
         System.out.println("title : " + title);
         System.out.println("content : " + content);

@@ -16,7 +16,7 @@ public class MyInterceptor extends HandlerInterceptorAdapter {
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
         long end = System.currentTimeMillis();
-        long start = (long)request.getAttribute("start");
-        System.out.println("URL : " + request.getRequestURI() + ", 걸린 시간 :"  + (end - start));
+        long start = (long) request.getAttribute("start");
+        System.out.println("URL : " + request.getRequestURI() + ", 걸린 시간 :" + (end - start));
     }
 }
