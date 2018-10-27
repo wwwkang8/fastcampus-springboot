@@ -1,5 +1,6 @@
 package examples.boot.myshop.controller;
 
+import examples.boot.myshop.security.AuthUser;
 import examples.boot.myshop.security.LoginUser;
 import examples.boot.myshop.utils.ServerInfo;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -21,11 +22,13 @@ public class BoardController {
     //  파라미터 searchStr  2개의 파라미터는 반드시 필요한 것은 아니다. String type
     @GetMapping
     public String list(
+            @AuthUser LoginUser loginUser,
             @RequestParam(name = "page", required = false, defaultValue = "1") int page,
             @RequestParam(name = "searchKind", required = false) String searchKind,
             @RequestParam(name = "searchStr", required = false) String searchStr
     ) {
-       LoginUser loginUser=(LoginUser) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+       //LoginUser loginUser=(LoginUser) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        //@AuthUser 어노테이션 때문에 위의 코드가 필요 없어진다.
        if(loginUser!=null){
            System.out.println("------------------");
            System.out.println(loginUser.getId());
