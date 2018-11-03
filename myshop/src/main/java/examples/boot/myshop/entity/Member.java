@@ -27,7 +27,7 @@ public class Member {
     @JoinTable(name="member_member_role",
                 joinColumns = @JoinColumn(name="member_id", referencedColumnName = "id"),
                 inverseJoinColumns = @JoinColumn(name="member_role_id", referencedColumnName = "id"))
-    Set<Role> roles; // Member는 여러개의 Role을 가질 수 있기 때문이다.
+    Set<Role> roles;
 
 
     public Member(){ // 생성자에는 현재 시간에 대한 정보를 받는다.
