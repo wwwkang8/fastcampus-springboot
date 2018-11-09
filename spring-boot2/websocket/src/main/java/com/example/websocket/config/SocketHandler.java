@@ -18,7 +18,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 @Component
 public class SocketHandler extends TextWebSocketHandler {
-    List<WebSocketSession> sessions = new CopyOnWriteArrayList<>();
+    List<WebSocketSession> sessions = new CopyOnWriteArrayList<>(); //접속한 세션 개수만큼 세션을 저장하고 있다.
     ObjectMapper objectMapper = new ObjectMapper();
 
     @Override
